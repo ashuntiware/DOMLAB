@@ -1,14 +1,26 @@
 var menuLinks = [
-    {text: 'about', href: '/about'},
-    {text: 'catalog', href: '/catalog'},
-    {text: 'orders', href: '/orders'},
-    {text: 'account', href: '/account'},
-  ];
+  {text: 'about', href: '/about'},
+  {text: 'catalog', href: '#', subLinks: [
+    {text: 'all', href: '/catalog/all'},
+    {text: 'top selling', href: '/catalog/top'},
+    {text: 'search', href: '/catalog/search'},
+  ]},
+  {text: 'orders', href: '#' , subLinks: [
+    {text: 'new', href: '/orders/new'},
+    {text: 'pending', href: '/orders/pending'},
+    {text: 'history', href: '/orders/history'},
+  ]},
+  {text: 'account', href: '#', subLinks: [
+    {text: 'profile', href: '/account/profile'},
+    {text: 'sign out', href: '/account/signout'},
+  ]},
+];
 
-for (let i = 0; i < menuLinks.length; i++);
-let a = document.createElement("a");
-a.attributes.href = menuLinks[i].href;
+for (let i = 0; i < menuLinks.length; i++){
+let a = document.createElement("a")
+a.attributes.href = menuLinks[i].href
 a.innerText = menuLinks[i].text
+}
 
 
 let mainEl = document.querySelector('main');
@@ -21,3 +33,4 @@ topMenuEl.style.height = ('100%');
 topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 topMenuEl.classList.add("flex-around");
 topMenuEl.appendChild(a);
+
