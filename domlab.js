@@ -22,7 +22,6 @@ a.attributes.href = menuLinks[i].href
 a.innerText = menuLinks[i].text
 }
 
-
 let mainEl = document.querySelector('main');
 mainEl.style.backgroundColor = 'var(--main-bg)';
 mainEl.innerHTML = "<h1>SEI Rocks!</h1>";
@@ -33,4 +32,8 @@ topMenuEl.style.height = ('100%');
 topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 topMenuEl.classList.add("flex-around");
 topMenuEl.appendChild(a);
+
+let <nav id="sub-menu"> = subMenuEl;
+subMenuEl.style.height = ('100%');
+subMenuEl.style.bacgroundColor = 'var(--sub-menu-bg)';
 
